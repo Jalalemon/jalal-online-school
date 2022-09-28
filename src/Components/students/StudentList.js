@@ -7,7 +7,7 @@ const StudentList = (props) => {
          
             <img src={picture} alt="" />
             <h4>Name: {name} </h4>
-            <h5>Time required: {time} </h5>
+            <h5>Time required: {time} m </h5>
                 <button className="btn btn-primary w-100">Add to List</button>
           
         </div>

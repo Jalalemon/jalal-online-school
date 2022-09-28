@@ -7,3 +7,18 @@ display:grid;
 grid-template-columns: repeat(3, 1fr);
 gap: 30px;
 }
+
+.cart {
+    background-color: antiquewhite;
+    
+}
+.author-info {
+    position: sticky;
+    top: 0;
+}
+.others-info {
+    background-color: gray;
+    color: aliceblue;
+    display: flex;
+    border-radius: 5px;
+}

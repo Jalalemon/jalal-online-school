@@ -22,3 +22,6 @@ gap: 30px;
     display: flex;
     border-radius: 5px;
 }
+.excercise-details {
+    padding: 12px;
+}

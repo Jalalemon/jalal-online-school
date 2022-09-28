@@ -4,11 +4,26 @@ import './ListContainer.css'
 
 const ListContainer = () => {
     const [students, setStudent] = useState([])
+    const [cart, setCart] = useState([]);
+
     useEffect (() => {
       fetch('data.json')
       .then(res => res.json())
       .then(data => setStudent(data))
-    }, [])
+    }, []);
+
+    const handleAddToCart = (students) => {
+       const newCart = [...cart, students]
+       setCart(newCart)
+       console.log(newCart);
+
+    }
+
+
+    let total = 0;
+    for (const students of cart ){
+        total = total + students.time;
+    }
     return (
         <div className='list container mt-5'>
            <div className=' container student-list'>
@@ -19,6 +34,7 @@ const ListContainer = () => {
                         students.map(student => <StudentList
                             key={student.id}
                             student={student}
+                            handleAddToCart = {handleAddToCart}
                         ></StudentList>)
                     }
                 </div>
@@ -43,7 +59,7 @@ const ListContainer = () => {
                     </div>
                     <div className="excercise-details bg-white pb-8 mt-5">
                         <h4>Reading Details:</h4>
-                        <h5 className='mt-5'><span>Reading time:</span> <span>00</span>m </h5>
+                        <h5 className='mt-5'><span>Reading time:</span> <span className='text-primary'>{total}</span>m </h5>
                         <h5 className='mt-5'><span>Break time:</span> <span>00</span>s </h5>
                     </div>
                 <button  type="button" class="btn btn-primary mt-2 w-100">Activity completed</button>

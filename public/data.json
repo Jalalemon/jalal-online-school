@@ -2,43 +2,43 @@
     {
         "id": "633476842ee85c32a408ab47",
         "balance": "$2,564.49",
-        "picture": "http://placehold.it/32x32",
-        "time": 25,
+        "picture": "./studyimg/study10.jfif ",
+        "time": 30,
         "name": "Cardenas Buck"
     },
     {
         "id": "63347684223367503216e9ca",
         "balance": "$3,018.94",
-        "picture": "http://placehold.it/32x32",
-        "time": 19,
+        "picture": "./studyimg/study8.jfif",
+        "time": 30,
         "name": "Kelley Phelps"
     },
     {
         "id": "633476841aa0b47b928a550d",
         "balance": "$1,884.70",
-        "picture": "http://placehold.it/32x32",
-        "time": 24,
+        "picture": "./studyimg/study2.jfif",
+        "time": 30,
         "name": "Conrad Perry"
     },
     {
         "id": "63347684acc8340b07bfda2d",
         "balance": "$2,444.55",
-        "picture": "http://placehold.it/32x32",
-        "time": 14,
+        "picture": "./studyimg/study3.jfif",
+        "time": 30,
         "name": "Hendrix Acevedo"
     },
     {
         "id": "633476846eff722bfab82c2b",
         "balance": "$2,011.98",
-        "picture": "http://placehold.it/32x32",
-        "time": 24,
+        "picture": "./studyimg/study4.jfif",
+        "time": 30,
         "name": "Denise Hartman"
     },
     {
         "id": "633476846c88ac25ccab5e5d",
         "balance": "$1,775.56",
-        "picture": "http://placehold.it/32x32",
-        "time": 15,
+        "picture": "./studyimg/study7.jfif",
+        "time": 30,
         "name": "Duke Avila"
     }
 ]

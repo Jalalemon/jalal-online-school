@@ -18,7 +18,6 @@ const ListContainer = () => {
     const handleAddToCart = (students) => {
        const newCart = [...cart, students]
        setCart(newCart)
-       console.log(newCart);
 
     }
 
@@ -33,14 +32,12 @@ const ListContainer = () => {
 
     useEffect(() => {
         const storedCart = getStoredcart();
-
+        const savedCart = [];
         for(const newTime in storedCart){
-            const addedTime = timerSeconds.find(second => second.newTime === newTime )
-            console.log(addedTime);
+            const addedTime = timerSeconds.find(second => second.newTime === newTime );
+         
         }
-      
-       
-       
+    
     }, [])
     let timeAdd = 0;
     const secondHandler10 = (timerSeconds) => {

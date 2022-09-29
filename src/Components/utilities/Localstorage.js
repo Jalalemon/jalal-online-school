@@ -15,7 +15,7 @@ const addToDb = (newTime) => {
     localStorage.setItem('reading-time',JSON.stringify(timingCart))
 }
 
-const getStoredcart = (newTime) =>{
+const getStoredcart = () =>{
     let timingCart = {};
     const storedCart = localStorage.getItem('reading-time');
     if (storedCart) {

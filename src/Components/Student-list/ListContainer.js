@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import StudentList from '../students/StudentList';
+import { addToDb } from '../utilities/Localstorage';
 import './ListContainer.css'
 
 const ListContainer = () => {
@@ -32,23 +33,24 @@ const ListContainer = () => {
     const secondHandler10 = (timerSeconds) => {
     const newTime = parseInt(timeAdd) + timerSeconds[0]
     setSeconds(newTime)
+    addToDb(newTime)
   
     }
 
     const secondHandler20 = (timerSeconds) => {
         const newTime = parseInt(timeAdd) + timerSeconds[1]
         setSeconds(newTime)
-       
+        addToDb(newTime)
     }
     const secondHandler30 = (timerSeconds) => {
         const newTime = parseInt(timeAdd) + timerSeconds[2]
         setSeconds(newTime)
-       
+        addToDb(newTime)
     }
     const secondHandler40 = (timerSeconds) => {
         const newTime = parseInt(timeAdd) + timerSeconds[3]
         setSeconds(newTime)
-       
+        addToDb(newTime)
     }
 
 

@@ -5,7 +5,7 @@ import { faBookOpenReader } from '@fortawesome/free-solid-svg-icons';
 
 const Nav = () => {
     return (
-        <div className='container text-primary mt-5'>
+        <div className='container text-danger mt-5'>
            
             <h1> <FontAwesomeIcon icon={faBookOpenReader} > </FontAwesomeIcon> Jalal's Online School</h1>
            

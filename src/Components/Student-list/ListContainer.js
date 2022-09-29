@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import StudentList from '../students/StudentList';
 import { addToDb } from '../utilities/Localstorage';
+import { getStoredcart } from '../utilities/Localstorage';
+import Swal from 'sweetalert2'
 import './ListContainer.css'
 
 const ListContainer = () => {
@@ -28,13 +30,23 @@ const ListContainer = () => {
 
     const timerSeconds = [10, 20, 30, 40];
     const [seconds, setSeconds] = useState([]);
-    
+
+    useEffect(() => {
+        const storedCart = getStoredcart();
+
+        for(const newTime in storedCart){
+            const addedTime = timerSeconds.find(second => second.newTime === newTime )
+            console.log(addedTime);
+        }
+      
+       
+       
+    }, [])
     let timeAdd = 0;
     const secondHandler10 = (timerSeconds) => {
     const newTime = parseInt(timeAdd) + timerSeconds[0]
     setSeconds(newTime)
     addToDb(newTime)
-  
     }
 
     const secondHandler20 = (timerSeconds) => {
@@ -51,6 +63,13 @@ const ListContainer = () => {
         const newTime = parseInt(timeAdd) + timerSeconds[3]
         setSeconds(newTime)
         addToDb(newTime)
+    }
+    const HandleTost =() => {
+        Swal.fire(
+            'Sabash kapaiya dicho!',
+            'Wow, click mere fataiya dicho!',
+            'success'
+        )
     }
 
 
@@ -73,8 +92,10 @@ const ListContainer = () => {
            <div className="container cart">
                 <div className="author-info">
                     <h6>Your passionate Teacher</h6>
+                   
                 <h4 className='mt-5 font-bold' class='mt-5 text-primary'>Jalal Uddin Emon </h4>
                 <p className='w-17 f-bold'>Chattogram, Bangladesh</p>
+                <p>Department of Bangla, University of Barishal</p>
                     <div className="others-info">
                         <h5>wieght : 55 </h5>
                         <h5>age : 22 </h5>
@@ -93,7 +114,9 @@ const ListContainer = () => {
                         <h5 className='mt-5'><span>Reading time:</span> <span className='text-primary'>{total}</span>m </h5>
                     <h5 className='mt-5'><span>Break time:</span> <span>{seconds}</span>s </h5>
                     </div>
-                <button  type="button" class="btn btn-primary mt-2 w-100">Activity completed</button>
+                    <button onClick={() => HandleTost()} type="button" class="btn btn-primary mt-2 w-100" 
+                   
+                    >Activity completed </button>
                </div>
 
 

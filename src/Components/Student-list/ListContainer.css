@@ -1,6 +1,7 @@
 .list {
     display: grid;
     grid-template-columns: 4fr 1fr;
+    margin-bottom: 20px;
 }
 .single-cart {
 display:grid;
@@ -24,4 +25,24 @@ gap: 30px;
 }
 .excercise-details {
     padding: 12px;
+}
+
+@media only screen and (min-width: 320px) and (max-width:480px) {
+.list {
+        display: block;
+        gap: 30px;
+}
+.single-cart {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+    
+}
+.author-info {
+    position: sticky;
+    top: 0;
+    gap: 30px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
 }

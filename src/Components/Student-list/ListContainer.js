@@ -119,7 +119,6 @@ const ListContainer = () => {
                     >Activity completed </button>
                </div>
 
-
            </div>
         </div>
     );
